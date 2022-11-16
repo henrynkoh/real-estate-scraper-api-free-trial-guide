@@ -15,8 +15,7 @@ If you’ve found this tutorial before visiting our website, the easiest way to 
 
 After filling in the form, you’ll receive an email with a username and password. You'll need these credentials to start using the Real Estate Scraper API.
 
-<img src="/Web%20scraper%20email%20example.png" width="400">
-<br>
+<img src="/Real-Estate-Scraper-API-onboarding.png" width="400">
 
 ## How to set up a Real Estate Scraper API?
 
