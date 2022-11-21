@@ -11,7 +11,7 @@ We’ll use Python with our Real Estate Scraper API in this example. If you wish
 If you’ve found this tutorial before visiting our website, the easiest way to get a free trial is by visiting the [Real Estate Scraper API](https://oxy.yt/ir0A) page and filling in the form.
 
 <br>
-<img src="/Web%20Scraper%20API%20free%20trial%20form.png" width="400">
+<img src="/Real Estate Free Trial Form.png" width="400">
 
 After filling in the form, you’ll receive an email with a username and password. You'll need these credentials to start using the Real Estate Scraper API.
 
