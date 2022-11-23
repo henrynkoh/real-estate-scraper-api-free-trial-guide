@@ -100,7 +100,7 @@ with open ('scraped_website.html', 'w') as output:
 
 After running the basic function, try adding parameters that will retrieve more specified data. 
 
-7. Geo_location parameter will help you collect geo-restricted data for the websites that the content is only available for certain countries. 
+7. Geo_location parameter will help you collect geo-restricted data for the websites that the content is only available to users from certain countries. 
 
 ```python
 'geo_location': 'United States'
@@ -156,8 +156,75 @@ with open ('scraped_website.html', 'w') as output:
   output.write(html_content)
 ```
 
+9. Finally, you can use Real Estate Scraper API's [Scheduler](https://developers.oxylabs.io/scraper-apis/getting-started/scheduler-beta) feature to automate your recurring scraping jobs. The code example below will make the Scheduler run five jobs at 03:00 on Mondays until `end_time` (inclusive) and will return results to your chosen `callback_url`.
+
+
+### Example:
+
+```python
+import requests
+username = 'username'
+password = 'password'
+​
+# Define a payload with some scraping jobs
+payload = {
+   'cron': '0 3 * * 1',
+   'items': [
+       {
+           'source': 'universal',
+           'url': 'https://www.zillow.com/homedetails/property1_zpid/',
+           'geo_location': 'United States',
+           'render': 'html',
+           'callback_url': 'https://my.callback.url/endpoint1',
+       },
+       {
+           'source': 'universal',
+           'url': 'https://www.zillow.com/homedetails/property2_zpid/',
+           'geo_location': 'United States',
+           'render': 'html',
+           'callback_url': 'https://my.callback.url/endpoint1',
+       },
+       {
+           'source': 'universal',
+           'url': 'https://www.zillow.com/homedetails/property3_zpid/',
+           'geo_location': 'United States',
+           'render': 'html',
+           'callback_url': 'https://my.callback.url/endpoint1',
+       },
+       {
+           'source': 'universal',
+           'url': 'https://www.zillow.com/homedetails/property4_zpid/',
+           'geo_location': 'United States',
+           'render': 'html',
+           'callback_url': 'https://my.callback.url/endpoint1',
+       },
+       {
+           'source': 'universal',
+           'url': 'https://www.zillow.com/homedetails/property5_zpid/',
+           'geo_location': 'United States',
+           'render': 'html',
+           'callback_url': 'https://my.callback.url/endpoint1',
+       },
+   ],
+   'end_time': '2032-12-21 12:34:45',
+}
+​
+# Submit the payload
+response = requests.request(
+   'POST',
+   'https://data.oxylabs.io/v1/schedules',
+   auth=(username, password),
+   json=payload,
+)
+​
+# Print prettified response to stdout.
+pprint(response.json())
+
+```
+
+
 ## Conclusion
 
-We hope this quick guide helped you understand how truly effortless it is to set up Oxylabs Real Estate Scraper API and how the integration process functions.
+We hope this quick guide helped you understand how truly effortless it is to set up Oxylabs Real Estate Scraper API and how the integration process functions. 
 
-As mentioned before, you can find popular scraping targets in our [documentation](https://developers.oxylabs.io/scraper-apis/real-estate-scraper-api). Get in touch with our Sales team to further discuss your use cases and what unique targets our Real Estate Scraper API could be used for.
+Visit Oxylabs [documentation](https://developers.oxylabs.io/scraper-apis/real-estate-scraper-api) to find scraping guidelines for other real estate websites. In case you couldn't find the website you are interested in, get in touch with our support team via the 24/7 available live chat. We will discuss your use case and see if we can give you a personalized offer.
