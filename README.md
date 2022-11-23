@@ -155,8 +155,9 @@ html_content = response.json()['results'][0]['content']
 with open ('scraped_website.html', 'w') as output:
   output.write(html_content)
 ```
+## Can I automate my recurring scraping jobs with Real Estate Scraper API?
 
-9. Finally, you can use Real Estate Scraper API's [Scheduler](https://developers.oxylabs.io/scraper-apis/getting-started/scheduler-beta) feature to automate your recurring scraping jobs. The code example below will make the Scheduler run five jobs at 03:00 on Mondays until `end_time` (inclusive) and will return results to your chosen `callback_url`.
+You can use Real Estate Scraper API's [Scheduler](https://developers.oxylabs.io/scraper-apis/getting-started/scheduler-beta) feature to automate your recurring scraping jobs. The code example below will make the Scheduler run five jobs at 03:00 on Mondays until `end_time` (inclusive) and will return results to your chosen `callback_url`. This feature works with the [Push-pull](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/integration-methods/push-pull) integration method only. 
 
 
 ### Example:
