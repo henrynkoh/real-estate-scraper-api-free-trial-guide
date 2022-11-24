@@ -2,7 +2,7 @@
 
 Use Real Estate Scraper API to extract publicly available property data from the most popular real estate websites without getting blocked.
 
-In this tutorial, we’ll show you all the unique benefits and features you may want to explore to make the most out of your one-week free trial. We hope you’ll have a much clearer view of whether this solution is for you.
+In this tutorial, we’ll show you all the unique benefits and features you may want to explore to make the most out of your one-week free trial. We hope you’ll have a much clearer view of whether this solution is right for you.
 
 The primary focus of this tutorial is to walk you through a straightforward example of how to set up a Real Estate Scraper API from scratch. We highly recommend setting this up with a website of your choice as this would allow you to test out the quality of data gathered, ease of integration, and, most importantly, if this is a product that solves your needs and is worth investing time and money into. 
 
